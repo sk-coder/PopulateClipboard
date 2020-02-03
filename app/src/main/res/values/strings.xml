@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Populate Clipboard Test</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_good_plain_text">Plain Text Good Num.</string>
+    <string name="action_bad_plain_text">Plain Text Bad Num.</string>
+    <string name="action_good_html_text">HTML Good Num.</string>
+    <string name="action_bad_html_text">HTML Bad Num.</string>
+    <string name="action_text_raw_uri">Text Raw URI</string>
+    <string name="action_text_uri">Text formatted URI</string>
+    <string name="action_image_uri">Image URI</string>
+    <string name="action_simple_intent">Intent</string>
+</resources>

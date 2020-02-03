@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.karneth.test.populateclipboard.MainActivity">
+    <group android:id="@+id/group_text">
+        <item
+            android:id="@+id/action_good_plain_text"
+            android:orderInCategory="100"
+            android:title="@string/action_good_plain_text"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_bad_plain_text"
+            android:orderInCategory="100"
+            android:title="@string/action_bad_plain_text"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_good_html_text"
+            android:orderInCategory="100"
+            android:title="@string/action_good_html_text"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_bad_html_text"
+            android:orderInCategory="100"
+            android:title="@string/action_bad_html_text"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_uri">
+        <item
+            android:id="@+id/action_text_raw_uri"
+            android:orderInCategory="100"
+            android:title="@string/action_text_raw_uri"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_text_uri"
+            android:orderInCategory="100"
+            android:title="@string/action_text_uri"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_image_uri"
+            android:orderInCategory="100"
+            android:title="@string/action_image_uri"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_intent">
+        <item
+            android:id="@+id/action_simple_intent"
+            android:orderInCategory="100"
+            android:title="@string/action_simple_intent"
+            app:showAsAction="never" />
+    </group>
+</menu>
