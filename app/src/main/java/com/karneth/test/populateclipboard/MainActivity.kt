@@ -4,6 +4,7 @@ import android.content.ClipData
 import android.content.ClipData.*
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -111,9 +112,24 @@ class MainActivity : AppCompatActivity() {
                 Log.i("Clip", "Raw URI Copy Selected")
                 // Get a handle to the Clipboard Service
                 val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val copyUri   = Uri.parse("android.resource://com.karneth.test.populateclipboard/raw/" + R.raw.valid_number)
 
                 // Create the ClipData object with the new text
-                val clip :ClipData = newRawUri("Raw URI", Uri.parse("android.resource://com.karneth.test.populateclipboard/raw/valid_number.txt"))
+                val clip :ClipData = newRawUri("Raw URI", copyUri)
+
+                // Set the clip as the primary clip item
+                clipboard.setPrimaryClip(clip)
+
+                return true    // Needed to operate with Option Item Selected
+            }
+            R.id.action_text_uri -> {
+                Log.i("Clip", "New URI Copy Selected")
+                // Get a handle to the Clipboard Service
+                val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val copyUri   = Uri.parse("android.resource://com.karneth.test.populateclipboard/raw/" + R.raw.valid_number)
+
+                // Create the ClipData object with the new text
+                val clip :ClipData = newUri(contentResolver,"New URI", copyUri)
 
                 // Set the clip as the primary clip item
                 clipboard.setPrimaryClip(clip)
@@ -121,7 +137,6 @@ class MainActivity : AppCompatActivity() {
                 return true    // Needed to operate with Option Item Selected
             }
             else -> super.onOptionsItemSelected(item)
-
         }
     }
 }

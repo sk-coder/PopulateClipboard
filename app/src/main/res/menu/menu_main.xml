@@ -41,11 +41,4 @@
             android:title="@string/action_image_uri"
             app:showAsAction="never" />
     </group>
-    <group android:id="@+id/group_intent">
-        <item
-            android:id="@+id/action_simple_intent"
-            android:orderInCategory="100"
-            android:title="@string/action_simple_intent"
-            app:showAsAction="never" />
-    </group>
 </menu>
